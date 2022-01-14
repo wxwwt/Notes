@@ -10,11 +10,11 @@ import java.util.concurrent.CountDownLatch;
  */
 public class FalseSharing {
 
-//    @Contended
+//        @Contended
     private static class Test {
-        //       volatile  long p0, p1, p2, p3, p4, p5, p6;
-        public long value = 0;
-//      volatile   long q0, q1, q2, q3, q4, q5, q6;
+//        volatile long p0, p1, p2, p3, p4, p5, p6;
+        public volatile long value = 0;
+//        volatile long q0, q1, q2, q3, q4, q5, q6;
     }
 
 
@@ -25,7 +25,7 @@ public class FalseSharing {
         array[1] = new Test();
     }
 
-    public static long count = 500_000_000L;
+    public static long count = 300_000_000L;
 
     public static void main(String[] args) throws InterruptedException {
 
