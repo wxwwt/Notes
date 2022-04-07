@@ -3,6 +3,7 @@ package com.scott.java.task;
 import java.util.concurrent.CountDownLatch;
 
 /**
+ * 伪共享测试代码
  * @author shenchuang
  * @date 2022/1/13 9:24 PM
  */
@@ -11,7 +12,7 @@ public class FalseSharing {
     private static class Test {
         private long p1, p2, p3, p4, p5, p6, p7;
         public long value = 0L;
-//        private long p9, p10, p11, p12, p13, p14, p15;
+        private long p9, p10, p11, p12, p13, p14, p15;
     }
 
 
